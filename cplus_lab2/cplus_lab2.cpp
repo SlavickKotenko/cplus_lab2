@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -69,9 +69,10 @@ void searchOwner(Owner* array, int size)
 		{
 			if (phonenumber == array[i].phonenumber1)
 			{
+				cout << "Найденная информация: " << endl;
 				cout << "Фамилия: " << array[i].name.surname << endl << "Имя: " << array[i].name.name << endl << "Отчество: " << array[i].name.patronomyc << endl;
-				cout << "\tАдрес: " << endl << "Почтовый инлекс: " << array[i].adress.index << ", Страна: " << array[i].adress.country << ", Регион:" << array[i].adress.region;
-				cout << ", Город: " << array[i].adress.city << "Улица: " << array[i].adress.street << ", Дом: " << array[i].adress.home << ", Квартира: " << array[i].adress.apartment << endl;
+				cout << "\tАдрес: " << endl << "Почтовый инлекс: " << array[i].adress.index << ", Страна: " << array[i].adress.country << ", Регион: " << array[i].adress.region;
+				cout << ", Город: " << array[i].adress.city << " Улица: " << array[i].adress.street << ", Дом: " << array[i].adress.home << ",Квартира: " << array[i].adress.apartment << endl;
 				cout << "Номер телефона: " << array[i].phonenumber1 << endl;
 				number++;
 			}
@@ -141,7 +142,7 @@ void sort(Owner* array, int size)
 	Owner temp;
 
 	int choose = 0;
-	cout << "Желаете отсортировать массив?Сортировка по номеру телефона (1),не сортировать(2)" << endl;
+	cout << "Желаете отсортировать массив?Сортировка по номеру телефона (1),не сортировать(2)";
 	cin >> choose;
 	if (choose == 1)
 	{
@@ -180,7 +181,7 @@ void sort(Owner* array, int size)
 
 	else
 	{
-		cout << "Вы решили не сортировать" << endl << endl;
+		cout  << endl << "Вы решили не сортировать" << endl << endl;
 	}
 
 }
@@ -192,8 +193,8 @@ void printArr(Owner* array, int size)
 	{
 		cout << "Владелец под номером " << i + 1 << endl;
 		cout << "Фамилия: " << array[i].name.surname << endl << "Имя: " << array[i].name.name << endl << "Отчество: " << array[i].name.patronomyc << endl;
-		cout << "\tАдрес: " << endl << "Почтовый инлекс: " << array[i].adress.index << ", Страна: " << array[i].adress.country << ", Регион:" << array[i].adress.region;
-		cout << ", Город: " << array[i].adress.city << "Улица: " << array[i].adress.street << ", Дом: " << array[i].adress.home << ", Квартира: " << array[i].adress.apartment << endl;
+		cout << "\tАдрес: " << endl << "Почтовый инлекс: " << array[i].adress.index << ", Страна: " << array[i].adress.country << ", Регион: " << array[i].adress.region;
+		cout << ", Город: " << array[i].adress.city << " Улица: " << array[i].adress.street << ", Дом: " << array[i].adress.home << ",Квартира: " << array[i].adress.apartment << endl;
 		cout << "Номер телефона: " << array[i].phonenumber1 << endl;
 		cout << endl;
 	}
@@ -209,7 +210,7 @@ int main()
 	int size = 0;
 	do
 	{
-		cout << "Введите количество владельцев стац. телефонов:" << endl;
+		cout << "Введите количество владельцев стац. телефонов  (ввод информации о владельцах вводить на английском языке):" << endl;
 		cin >> size;
 	} while (size < 1);
 
